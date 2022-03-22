@@ -1,0 +1,44 @@
+Array: contiguous area of memory consisting of equal-size elements indexed by contiguous integers
+
+What's special about arrays?
+- Constant-time access to read/write
+	- 1
+	- array_addr + elem_size * (i - first_index)
+
+Multi-Dimensional Arrays:
+- E.g. 3 x 6 array
+	- array_addr + elem_size[(3 - 1) * 6 + (4 - 1)]
+- Row-major indexing:
+	- E.g (3x6 array)
+		- (1,1) (1,2) (1,3) (1,4) ... (2,1)
+- Column-major indexing:
+	- Opposite of row-major
+
+Times for Common Operations:
+- Add/remove at end of array
+	- O(1)
+- Add/remove at beginning of array
+	- O(n)
+- Add/remove at middle of array
+	- O(n)
+
+Dynamic Arrays: abstract data type with following operations:
+	- Get(i): returns element at location i*
+		- O(1)
+	- Set(i, val): sets element i to val*
+		- O(1)
+	- PushBack(val): adds val to the end
+	`	- O(n)
+	- Remove(i): removes elements at location i
+		- O(n)
+	- Size(): number of elements
+		- O(1)
+	- *must be constant time
+- Idea: stores a pointer to dynamically allocated array, and replaces with newly-allocated array as needed; can be resized
+	- some space can be wasted
+- Implementation:
+	- Store:
+		- arr: dynamically-allocated array
+		- capacity: size of dynamically-allocated array
+		- size: number of elements currently in the array
+
