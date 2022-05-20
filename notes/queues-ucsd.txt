@@ -1,0 +1,16 @@
+Queue: abstract data type (FIFO)
+	e.g. Services
+	- Enqueue(key): adds key to collection
+	- Key Dequeue(): removes and returns least recently-added key
+	- Boolean Empty(): are there any elements?
+	- O(1) runtime for above operations
+
+Implementation with Linked List:
+	- Doubly Linked List with head and tail
+	- Enqueue: uses List.PushBack
+	- Dequeue: uses List.TopFront and List.PopFront
+	- Empty: uses List.Empty
+
+Implementation with Array:
+	- Two pointers: read and write
+	- After we reach end of array, go back to the front of the array
