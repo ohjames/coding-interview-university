@@ -1,0 +1,3 @@
+Disadvantages of Linked Lists:
+	- Amount of memory used differ dramatically
+	- Memory access is relatively slowx
