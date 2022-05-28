@@ -656,7 +656,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         (for when you pass a pointer to a function that may change the address where that pointer points)
         This page is just to get a grasp on ptr to ptr. I don't recommend this list traversal style. Readability and maintainability suffer due to cleverness.
         - [Pointers to Pointers](https://www.eskimo.com/~scs/cclass/int/sx8.html)
-    - [ ] Implement (I did with tail pointer & without):
+    - [x] Implement (I did with tail pointer & without):
         - [x] size() - returns number of data elements in list
         - [x] empty() - bool returns true if empty
         - [x] value_at(index) - returns the value of the nth item (starting at 0 for first)
@@ -682,11 +682,11 @@ if you can identify the runtime complexity of different algorithms. It's a super
 - ### Queue
     - [x] [Queue (video)](https://www.coursera.org/lecture/data-structures/queues-EShpq)
     - [x] [Circular buffer/FIFO](https://en.wikipedia.org/wiki/Circular_buffer)
-    - [ ] Implement using linked-list, with tail pointer:
+    - [x] Implement using linked-list, with tail pointer:
         - enqueue(value) - adds value at position at tail
         - dequeue() - returns value and removes least recently added element (front)
         - empty()
-    - [ ] Implement using fixed-sized array:
+    - [x] Implement using fixed-sized array:
         - enqueue(value) - adds item at end of available storage
         - dequeue() - returns value and removes least recently added element
         - empty()

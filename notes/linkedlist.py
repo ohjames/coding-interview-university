@@ -61,12 +61,18 @@ class SingleLinkedList:
         current._next = newest
         self._tail = newest
         self._size += 1
-        # current = self._head
-        # while current._next:
-        #     current = current._next
-        # current._next = newest
-        # self._tail = newest
-        # self._size += 1
+
+    def append_notail(self, value):
+        newest = self._Node(value, None)
+        if self._head is None:
+            self._head = newest
+            return
+        current = self._head
+        while current._next:
+            current = current._next
+        current._next = newest
+        self._tail = newest
+        self._size += 1
 
     def pop_back(self):
         if self.is_empty():
@@ -77,10 +83,12 @@ class SingleLinkedList:
             self._tail = None
             return answer
         current = self._head
-        while current._next._next:
+        temp = self._head
+        while current._next:
+            temp = current
             current = current._next
-        current._next = None
-        self._tail = current
+        temp._next = None
+        self._tail = temp
         self._size -= 1
         return answer
 
@@ -93,6 +101,14 @@ class SingleLinkedList:
         if self._tail is None:
             raise Empty('Linked List is empty')
         return self._tail._value
+
+    def back_notail(self):
+        if self._head is None:
+            raise Empty('Linked List is empty')
+        current = self._head
+        while current._next:
+            current = current._next
+        return current
 
     def insert(self, i, value):
         current = self._head
@@ -139,6 +155,7 @@ class SingleLinkedList:
 
     def reverse(self):
         current = self._head
+        self._tail = self._head
         prev = None
         while current:
             self._next = current._next
