@@ -1,0 +1,35 @@
+Examples of Trees:
+	- Dictionary Search
+	- Date Ranges
+	- Closest Height
+Local Search: stores number of elements each with key coming from ordered set
+	Supports following operations:
+		- RangeSearch(x,y): returns all elements with keys between x and y
+		- NearestNeighbors(z): returns the element  with keys on either side of z
+		- Insert(x): adds element with key x
+		- Delete(x): removes element with key x
+
+Hash Table:
+	- RangeSearch(x,y): Impossible
+	- NearestNeighbors(z): Impossible
+	- Insert(x): O(1)
+	- Delete(x): O(1)
+
+Arrays:
+	- RangeSearch(x,y): O(n)
+	- NearestNeighbors(z): O(n)
+	- Insert(x): O(1)
+	- Delete(x): O(1)
+
+Sorted Arrays:
+	- RangeSearch(x,y): O(log n)
+	- NearestNeighbors(z): O(log n)
+	- Insert(x): O(n)
+	- Delete(x): O(n)
+
+Linked Lists:
+	- RangeSearch(x,y): O(n)
+	- NearestNeighbors(z): O(n)
+	- Insert(x): O(1)
+	- Delete(x): O(1)
+

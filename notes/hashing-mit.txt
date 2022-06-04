@@ -1,0 +1,122 @@
+Dictionary: ADT maintains set of items, each with a key
+	Operations:
+		- insert(item): overwrites any existing key
+		- delete(item)
+		- search(key): return item with given key; KeyError if doesn't exist
+		
+In Python:
+	D[key]: search
+	D[key] = value: insert
+	del D[key]: delete
+	item = (key, value)
+
+Examples:
+	- Docdist
+	- Database
+		- Hashing vs binary trees
+	- Compilers & interpreters
+	- Network router
+		- Servers
+	- Substring search
+	- String commonalities
+	- Field synchronization
+		- Dropbox
+	- Cryptography
+
+Simple Approach: 
+	1. Direct-access table
+		- Store items in array
+		- Indexed by key
+		Disadvantage:
+			1. Keys may not be integers
+			2. Gigantic memory hog
+		Solution:
+			1. Prehash: maps keys to non-negative integers
+				- In theory, keys are finite and discrete (string of bits)
+				- In Python hash(x) is prehash of x
+				- hash('\0B') = hash('\0\0C') = 64
+			2. Hashing: reduce universe of all keys (integers) down to reasonable size m for table
+Collisions:
+	1. Chaining: linked list of colliding elements in each slot of hash table
+		Simple uniform hashing: each key is equally likely to be hashed to any slot of the table independent of where other keys hashing
+		Analysis:
+			- expected length of chain for n keys, m slots = n/m = alpha = load factor = theta(1) if m = theta(n)
+				- O(1 + len(chain) or alpha)
+
+Hash Functions:
+	1. Division method: h(k) = k mod m
+	2. Multiplication method: h(k) = [(a * k) mod 2 ^^ w] >> (w - r)
+	3. Universal hashing: h(k) = [(ak + b) mod p] mod m where a and b are random numbers 0 to p-1 and p is prime number
+		Worst-case keys: 1/m
+
+How to choose m?
+	- Want m = theta(n) -> alpha = theta(1)
+	- Start small then grow/shrink as necessary
+	If m > n: grow table
+		- Grow table: m -> m'
+			- make table of size m'
+			- build new hash f'
+			- rehash: for item in T:
+					T'.insert(item)
+			- Theta(n + m + m')
+		- m' = 2m: cost of n inserts theta(n)
+		- Deletion:
+			1. if m = n/2 then shrink -> m/2
+				a. Issue if we're at half and insert/delete, we use O(n) each time
+			2. Use m = n/4 then strink -> m/2
+				a. Amortized time remains constant more consistently
+
+Check substring in text:
+any (s == t[i: i + len(s)])
+	for i in range(len(t) - len(s)): O(s * t)
+
+Rolling Hash ADT:
+	- r.append(c): add char c to end of x
+	- r.skip(c): delete first char of x assuming it is c
+	r maintains a string x
+		- r(): hash value of x = h(x)
+
+Karp-Rabin algorithm:
+for c in s: rs.append(c)
+for c in t[:len(s)]:
+	rt.append(c)
+if rs() == rt():
+for i in range(len(s), len(t)):
+	rt.skip(t[i - len(s)]
+	rt.append(t[i])
+	if rs() == rt():
+		
+
+Open addressing:
+	No chaining
+	Assume one item per slot m >= n
+Probing: Hash function specifies order of slots to probe for a key (for insert/search/delete)
+
+Insert(k,v): keep probing until empty slot is found. Insert item when found
+Search(k): as long as slots encountered are occupied by keys ne k; keep probing until either encounter k or find empty slot
+Delete(k): use DeleteMe flag instead of None 
+
+
+Probing Strategies:
+	1. Linear Probing: h(k, i) = (h'(k) + i) mod m
+		Clustering: consecutive groups of occupied slots which keep growing
+	2. Double Hashing: h(k, i) = (h1(k) + ih2(k)) mod m
+		if h2(k) is relatively prime to m -> permutation
+		m = 2^^r, h2(k) for all k is odd
+	3. Uniform Hashing Assumption: each key is equally likely to have any one of m! permutations as its probe sequence
+		alpha = n/m (Cost of operations insert <= 1/(1-alpha); alpha -> 1; want alpha to be less than 0.5
+
+Password Storage:
+	Given h(x) = Q, it is very hard to find x at h(x) = Q
+	h(x') = h(x) = Q
+
+Dictionary: maintain set of items, each with a key, subject to insert(item), delete(item), search(key)
+
+Static Dictionary: given n keys, support search
+
+Perfect hashing: O(1) for search; O(n) space; polynomial build time
+	Idea: 2-level hashing
+	1. Pick h1 {0, ..., u-1} -> {0, 1, ..., m-1} from universal hash family, m = O(n)
+	2. For each slot j E {0, ..., m-1}
+		- lj = # keys (among h) hashing to slot
+		- pick h2j: {0, 1, ..., u-1} -> {0, 1, ..., lj^^2 - 1} from universal hash family

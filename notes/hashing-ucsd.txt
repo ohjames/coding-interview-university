@@ -1,0 +1,83 @@
+Accessing an address is O(1) operation
+
+Hash Table Idea: if I want to add something into an array, could I find a way to translate it into an index?
+K mod N is common hash function
+Characters can be used via ASCII values
+
+How to Come Up with Good Hash Functions:
+
+Phone Book: design ds to store contancts: names of people along with phone numbers
+    Operations:
+        - Add and delete contancts
+        - Call person by names
+        - Determine who is calling given their number
+    Need two maps:
+        1. Phone number -> names
+        2. Names -> phone number
+    Implement these maps as hash tables
+        1. Chaining: select hash function h of cardinality m
+            a. Create array Chains of size m
+            b. Each element of Chains is list of pairs (name, phoneNumber) called chain
+            c. Pair (name, phoneNumber) goes into chain at position h(ConvertToInt(phoneNumber)) in array Chains
+        2. Parameters:
+            a. n contacts stored
+            b. m - cardinality of hash function
+            c. Note: hash table size for chaining should be equal to m 
+            d. c - length of longest chain
+            e. Theta(n + m) memory is used
+            f. Operations run in time theta(c + 1)
+            g. Want small m and c! (but c >= n/m)
+        3. First Digits:
+            a. for map from phone numbers to names, select m = 1000
+            b. hash function: take first three digits 
+            c. h(800-123-45-67) = 800
+            d. Problem: area code
+                i. h(425-234-55-67) =
+                ii. h(425-123-45-67) =
+                iii. h(425-223-23-23) = ... = 425
+        4. Last Digits:
+            a. select m = 1000
+            b. hash function: take last three digits
+            c. h(800-123-45-67) = 567
+            d. Problem: if many phone numbers end with three zeros
+        5. Random Digits:
+            a. select m = 1000
+            b. hash function: random number between 0 and 999
+            c. Uniform distribution of hash values
+            d. Different value when hash function called again - won't be able to find it
+            e. Hash function must be deterministic
+        6. Good Hash Functions:
+            a. Deterministic
+            b. Fast to compute
+            c. Distributes keys well into different cells
+            d. Few collisions
+        7. No Universal Hash Function:
+            a. Lemma: if number of possible keys is big, for any hash function h there is a bad input resulting in many collisions
+
+Julia's Diary:
+    1. Had breakfast
+    2. Went for a walk
+    ...
+    239. Lent $100 to Daniel
+    240. Watched "House of Cards"
+    Hash function:
+        H[i+1] = h(h(Text[i+1]) * H[i])
+    0                 0000
+    1 Had breakfast   2308
+    2 Went for a walk 204
+    
+    h("Had breakfast") = 364
+    h("3640000") = 2308
+    h("Went for a walk") = 1782
+    h("17822308") = 204
+
+Julia' Bank:
+    Add number called nonce in brackets to end of each record in such that hash column value always end with three zeros (divisible by 1000)
+    0                       0000
+    1 Had breakfast(263)    2000
+    2 Went for a walk(352)  7000
+
+    h("Had breakfast(263)") = 125,
+    h("1250000") = 2000
+    h("Went for a walk(352)") = 9876,
+    h("98762000") = 7000
