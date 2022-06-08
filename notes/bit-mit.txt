@@ -1,0 +1,63 @@
+Set kth Bit: Set kth bit in a word x to 1
+    Idea: Shift and OR
+    y = x | (1 << k)
+
+Clear kth Bit: Clear the kth bit in word x 
+    Idea: Shift, complement, and AND
+    y = x & ~(1 << k)
+
+Toggle kth Bit: Flip the kth bit in word x 
+    Idea: Shift and XOR
+    y = x ^ (1 << k)
+
+Extract a Bit Field: Extract a bit field from word x 
+    Idea: Mask and shift 
+    (x & mask) >> shift 
+
+Set a Bit Field: Set bit field in word x to value y
+    Idea: Invert mask to clear, and OR the shifted value 
+    x = (x & ~mask) | (y << shift)
+        Should ((y << shift) & mask) to check if y value is even in x 
+
+Ordinary Swap: Swap two integers x and y
+    tmp = x 
+    x = y
+    y = tmp
+
+No-Temp Swap: Swap x and y without using placeholder
+    x = x ^ y
+    y = x ^ y
+    x = x ^ y
+    x, y = y, x 
+    Why it works: XOR is its own inverse (x ^ y) ^ y -> x 
+    Performance: Poor at exploiting instruction-level parallelism (ILP)
+
+Minimum of Two Integers: Find the minimum r of two integers x and y
+    if x < y: r = x; else r = y
+    Performance: Mispredicted branch empties the processor pipeline
+    Caveat: Compiler usually smart enough to optimize away unpredictable branch, but maybe not 
+
+No-Branch Minimum: Find the minimum r of two integers x and y without using branch 
+    r = y ^ ((x ^ y) & -(x < y))
+    Why it works: 0 and 1 are booleans; if x < y then -(x < y) -> -1, which is all 1s in two's complement representation, therefore y ^ (x ^ y) -> x 
+
+Why learn Bit Hacks?
+    - Because compiler does them, and it will help to understand what compiler is doing when looking at assembly code 
+    - Compiler sometimes doesn't optimize, and have to do by hand
+    - Bit hacks for words extend naturally to bit and word hacks for vectors
+    - Tricks arise in other domains
+
+Modular Addition: Comput (x + y) mod n, assuming 0 <= x < n and 0 <= y < n 
+    r = (x + y) % n 
+    z = x + y
+    r = (z < n) ? z : z - n 
+    z = x + y
+    r = z - (n & -(z >= n))
+
+Round up to Power of 2: Compute 2 ** [log n]
+
+Least Significant 1: Compute the mask of the least-significant 1 in word x 
+    r = x & (-x)
+    Why it works: Binary representation of -x is (~x) + 1
+
+Log Base 2 of a Power of 2: Compute log x, where x is power of 2

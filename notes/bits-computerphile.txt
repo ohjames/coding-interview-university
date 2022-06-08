@@ -1,0 +1,12 @@
+4 Bits: Focus on left one. 0 is positive, 1 is negative
+
+1s Complement:
+111010101
+000101010
+
+Bit Addition:
+0 and 1 makes 1
+1 and 1 makes 0, carrying 1
+0 and 0 makes 0
+
+2s Complement is 1s Complement + 1
