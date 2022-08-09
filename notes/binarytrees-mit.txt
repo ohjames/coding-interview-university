@@ -1,1 +1,43 @@
-Binary Trees:
+Binary Tree: each node has three components of parent, left child, and right child
+
+Subtree(x): everything under node x; x is root
+depth(x): number of ancestors or number of edges in path from x up to root 
+height(x): number of edges in longest downward path from x; max depth in subtree(x)
+
+Traversal order: 
+    for every node x:
+        nodes in x.left before x; x.right after x 
+
+    iter(x): O(n)
+        iter(x.left)
+        output(x)
+        iter(x.right)
+
+Traversal Operations:
+    subtree_first(node): which comes first in traversal order or go left-most until we fall off tree node=None O(h)
+        node = node.left until node = None 
+        return node 
+
+    succcessor(node): next after node in tree's traversal order O(h)
+        if node.right: return subtree_first(node.right)
+        else: walk up tree (node = node.parent) until go up to left branch (node == node.parent.left)
+            return node 
+    
+    subtree_insert_after(node.new): O(h)
+        if no node.right: put new there 
+        else: put new as successor(node).left 
+
+    subtree_delete(node): O(h)
+        if node is leaf: detach from parent
+        else:
+            if node.left: swap node.item with predecessor(node)
+                substree_delete(predecessor)
+            if node.right: 
+
+Sequence: traversal order = sequence order
+
+Set: 
+    trav.order = increasing item.key 
+    find(k)
+    find_prev()
+    find_next()
