@@ -46,6 +46,7 @@
   - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
   - [Coding Interview Essentials](https://github.com/ajinkyal121/coding-interview-university/blob/master/extras/cheat%20sheets/Coding%20Interview%20Python%20Language%20Essentials.pdf)
   - [Data Structures And Algorithms in Python](https://www.youtube.com/watch?v=kQDxmjfkIKY)
+  - [Python Programming Tutorial](https://www.scaler.com/topics/python/)
 - Java
   - [Stanford CS106A - Programming Methodology (video)](https://see.stanford.edu/Course/CS106A)
   - [Introduction To Programming In Java](http://introcs.cs.princeton.edu/java/home/)
@@ -77,6 +78,7 @@
   - [Javascript Beginner Tutorials](https://www.youtube.com/playlist?list=PL41lfR-6DnOrwYi5d824q9-Y6z3JdSgQa)
   - [Javascript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/)
   - [Javascript Algorithms With Explanations](https://github.com/trekhleb/javascript-algorithms)
+  - [Javascript Tutorial - Learn From Scratch](https://www.scaler.com/topics/javascript/)
 - Rust
   - [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html)
   - [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
