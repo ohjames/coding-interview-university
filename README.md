@@ -17,6 +17,7 @@
 <details>
 <summary>Translations:</summary>
 
+- [اردو - Urdu](translations/README-ur.md)
 - [中文版本](translations/README-cn.md)
 - [Tiếng Việt - Vietnamese](translations/README-vi.md)
 - [Español](translations/README-es.md)
@@ -45,13 +46,12 @@
 - [Українська](https://github.com/jwasham/coding-interview-university/issues/106)
 - [Korean(한국어)](https://github.com/jwasham/coding-interview-university/issues/118)
 - [Telugu](https://github.com/jwasham/coding-interview-university/issues/117)
-- [Urdu](https://github.com/jwasham/coding-interview-university/issues/519)
 - [Thai](https://github.com/jwasham/coding-interview-university/issues/156)
 - [Greek](https://github.com/jwasham/coding-interview-university/issues/166)
 - [Malayalam](https://github.com/jwasham/coding-interview-university/issues/239)
 - [Persian - Farsi](https://github.com/jwasham/coding-interview-university/issues/186)
+- [Italian](https://github.com/jwasham/coding-interview-university/issues/1030)
 - [Afrikaans](https://github.com/jwasham/coding-interview-university/issues/1164)
-
 </details>
 
 <div align="center">
@@ -63,20 +63,14 @@
         <strong>Special thanks to:</strong>
     </p>
     <div>
-        <a href="https://algo.monster/?utm_campaign=jwasham&utm_medium=referral&utm_content=coding-interview-university&utm_source=github">
+        <a href="https://meetapro.com/?utm_source=ciusponsor">
             <div>
-                <img src="https://d3j2pkmjtin6ou.cloudfront.net/sponsors/algo-monster.png" width="300" alt="AlgoMonster">
+                <img src="https://d3j2pkmjtin6ou.cloudfront.net/sponsors/meetapro.jpg" width="414" alt="Meetapro">
             </div>
             <div>
-                <p>
-                    <strong>Master the technical interview without endless grinding.</strong>
-                </p>
-            </div>
-            <div>
-                <sup>Created by ex-Google engineers, AlgoMonster will help you crush the technical interview in less time 
-                and with fewer sleepless nights grinding away random problems. You will learn the key patterns necessary to solve 
-                any interview question and gain the systematic knowledge you need to prove your expertise. Be more confident 
-                as you walk into that interview!</sup>
+                <sup>Feeling anxious about your upcoming interviews? Want to outdo Google's notoriously low 0.2% acceptance rate? Look no further than Meetapro! 
+                Our Airbnb-style setup connects you with expert interviewers from FAANG and other industry giants. Their personalized feedback and tips are pure gold, 
+                and they can double your chances of landing your dream job. Sign up for Meetapro today and take your career to the next level!</sup>
             </div>
         </a>
     </div>
@@ -94,11 +88,8 @@ This is my multi-month study plan for becoming a software engineer for a large c
 * Patience
 * Time
 
-Note this is a study plan for **software engineering**, not web development. Large software companies like Google, Amazon, 
-Facebook and Microsoft view software engineering as different from web development. For example, Amazon has 
-Frontend Engineers (FEE) and Software Development Engineers (SDE). These are 2 separate roles and the interviews for 
-them will not be the same, as each has its own competencies. These companies require computer science knowledge for 
-software development/engineering roles.
+Note this is a study plan for **software engineering**, not frontend engineering or fullstack development. There are really 
+super roadmaps and coursework for those career paths elsewhere (see https://roadmap.sh/ for more info).
 
 There is a lot to learn in a university Computer Science program, but only knowing about 75% is good enough for an interview, so that's what I cover here. 
 For a complete CS self-taught program, the resources for my study plan have been included in Kamran Ahmed's Computer Science Roadmap: https://roadmap.sh/computer-science
@@ -1229,7 +1220,7 @@ Graphs can be used to represent many problems in computer science, so this secti
 
 - [ ] Series of 2-3 minutes short subject videos (23 videos)
     - [Videos](https://www.youtube.com/watch?v=r4r1DZcx1cM&list=PLmVb1OknmNJuC5POdcDv5oCS7_OUkDgpj&index=22)
-- [ ] Series of 2-5 minutes short subject videos - Michael Sambol (38 videos):
+- [ ] Series of 2-5 minutes short subject videos - Michael Sambol (40 videos):
     - [Videos](https://www.youtube.com/channel/UCzDJwLWoYCUQowF_nG3m5OQ)
 - [ ] [Sedgewick Videos - Algorithms I](https://www.coursera.org/learn/algorithms-part1)
 - [ ] [Sedgewick Videos - Algorithms II](https://www.coursera.org/learn/algorithms-part2)
@@ -1239,17 +1230,11 @@ Graphs can be used to represent many problems in computer science, so this secti
 ## Update Your Resume
 
 - See Resume prep information in the books: "Cracking The Coding Interview" and "Programming Interviews Exposed"
-- I don't know how important this is (you can do your own research) but here is an article on making your resume ATS Compliant:
-    - [How to Create or Check if your Resume is ATS Compliant](https://ayedot.com/97/MiniBlog/Meaning-of-ATS-compliant-resume-and-How-to-create-ATS-Resume-for-Free)
 - ["This Is What A GOOD Resume Should Look Like" by Gayle McDowell (author of Cracking the Coding Interview)](https://www.careercup.com/resume), 
     - Note by the author: "This is for a US-focused resume. CVs for India and other countries have different expectations, although many of the points will be the same."
 - ["Step-by-step resume guide" by Tech Interview Handbook](https://www.techinterviewhandbook.org/resume/guide)
     - Detailed guide on how to set up your resume from scratch, write effective resume content, optimize it, and test your resume
-
-
-## Find a Job
-
-- [Sites for Finding Jobs](https://ayedot.com/151/MiniBlog/Top-10-Best-Websites-for-Careers--Jobs)
+    - Detailed guide on how to set up your resume from scratch, write effective resume content, optimize it, and test your resume
 
 ## Interview Process & General Interview Prep
 
@@ -1265,8 +1250,6 @@ Graphs can be used to represent many problems in computer science, so this secti
     - [ ] [The Approach](https://www.youtube.com/watch?v=wCl9kvQGHPI)
     - [ ] [Problem Walkthrough](https://www.youtube.com/watch?v=4UWDyJq8jZg)
 - Prep Courses:
-    - [Software Engineer Interview Unleashed (paid course)](https://www.udemy.com/software-engineer-interview-unleashed):
-        - Learn how to make yourself ready for software engineer interviews from a former Google interviewer.
     - [Python for Data Structures, Algorithms, and Interviews (paid course)](https://www.udemy.com/python-for-data-structures-algorithms-and-interviews/):
         - A Python centric interview prep course which covers data structures, algorithms, mock interviews and much more.
     - [Intro to Data Structures and Algorithms using Python (Udacity free course)](https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513):
@@ -1275,11 +1258,14 @@ Graphs can be used to represent many problems in computer science, so this secti
         - Get hands-on practice with over 100 data structures and algorithm exercises and guidance from a dedicated mentor to help prepare you for interviews and on-the-job scenarios.
     - [Grokking the Behavioral Interview (Educative free course)](https://www.educative.io/courses/grokking-the-behavioral-interview):
         - Many times, it’s not your technical competency that holds you back from landing your dream job, it’s how you perform on the behavioral interview.
+    - [AlgoMonster (paid course with free content)](https://algo.monster/?utm_campaign=jwasham&utm_medium=referral&utm_content=coding-interview-university&utm_source=github):
+      - The crash course for LeetCode. Covers all the patterns condensed from thousands of questions.
 
 Mock Interviews:
 - [Gainlo.co: Mock interviewers from big companies](http://www.gainlo.co/#!/) - I used this and it helped me relax for the phone screen and on-site interview
 - [Pramp: Mock interviews from/with peers](https://www.pramp.com/) - peer-to-peer model of practice interviews
 - [interviewing.io: Practice mock interview with senior engineers](https://interviewing.io) - anonymous algorithmic/systems design interviews with senior engineers from FAANG anonymously
+- [Meetapro: Mock interviews with top FAANG interviewers](https://meetapro.com/?utm_source=ciusponsor) - an Airbnb-style mock interview/coaching platform.
 
 ## Be thinking of for when the interview comes
 
@@ -1298,9 +1284,6 @@ Have a story, not just data, about something you accomplished.
 - What was the hardest bug you faced at [job x / project y]?
 - What did you learn at [job x / project y]?
 - What would you have done better at [job x / project y]?
-
-- If you find it hard to come up with good answers of these types of interview questions, here are some ideas: 
-    - [General Interview Questions and their Answers](https://ayedot.com/119/MiniBlog/General-Interview-Questions-and-their-Answers-for-Tech-Jobs)
 
 ## Have questions for the interviewer
 
@@ -1889,7 +1872,7 @@ You're never really done.
     - Stanford lectures on sorting:
         - [Lecture 15 | Programming Abstractions (video)](https://www.youtube.com/watch?v=ENp00xylP7c&index=15&list=PLFE6E58F856038C69)
         - [Lecture 16 | Programming Abstractions (video)](https://www.youtube.com/watch?v=y4M9IVgrVKo&index=16&list=PLFE6E58F856038C69)
-    - Shai Simonson, [Aduni.org](http://www.aduni.org/):
+    - Shai Simonson:
         - [Algorithms - Sorting - Lecture 2 (video)](https://www.youtube.com/watch?v=odNJmw5TOEE&list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&index=2)
         - [Algorithms - Sorting II - Lecture 3 (video)](https://www.youtube.com/watch?v=hj8YKFTFKEE&list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&index=3)
     - Steven Skiena lectures on sorting:
